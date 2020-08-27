@@ -352,10 +352,10 @@ ul.reviews {
       }
 		}
 
-		.button {
+    .button {
 			@extend .btn, .btn-sm, .btn-outline-danger;
 			margin-left: 0.5rem;
-		}
+    }
   }
 }
 
