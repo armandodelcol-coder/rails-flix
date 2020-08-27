@@ -22,6 +22,8 @@ class Movie < ApplicationRecord
     total_gross.blank? || total_gross < 225_000_000
   end
 
+  has_many :reviews, dependent: :destroy
+
   validates :title, :released_on, :duration, presence: true
   validates :description, length: { minimum: 25 }
   validates :total_gross, numericality: { greater_than_or_equal_to: 0 }

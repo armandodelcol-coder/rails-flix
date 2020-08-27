@@ -25,7 +25,12 @@ Movie.create!([
     total_gross: 1_110_662_849,
     director: 'Anna Boden',
     duration: '124 min',
-    image_file_name: 'captain-marvel.png'
+    image_file_name: 'captain-marvel.png',
+    reviews: [
+      Review.create(name: "Larry", stars: 5, comment: "Awesome!"),
+      Review.create(name: "Daisy", stars: 4, comment: "Great!"),
+      Review.create(name: "Moe", stars: 3, comment: "Spilled my popcorn!")
+    ]
   },
   {
     title: 'Black Panther',
