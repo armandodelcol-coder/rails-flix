@@ -30,6 +30,18 @@ class ApplicationController < ActionController::Base
     current_user && current_user.admin?
   end
 
+  def require_correct_user
+    @user = User.find(params[:id])
+    redirect_to root_url unless current_user?(@user)
+  end
+
+  def require_correct_user_or_admin
+    @user = User.find(params[:id])
+    unless current_user_admin? || current_user?(@user)
+      redirect_to root_url, alert: "Unauthorized access!"
+    end
+  end
+
   helper_method :current_user?,
                 :current_user,
                 :current_user_admin?

@@ -1,6 +1,8 @@
 class ReviewsController < ApplicationController
   before_action :require_signin
   before_action :set_movie
+  before_action :require_correct_user, only: [:edit, :update]
+  before_action :require_correct_user_or_admin, only: [:destroy]
 
   def index
     @reviews = @movie.reviews

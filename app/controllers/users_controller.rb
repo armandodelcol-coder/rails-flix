@@ -53,11 +53,4 @@ class UsersController < ApplicationController
       permit(:name, :email, :password, :password_confirmation, :username)
   end
 
-  def require_correct_user
-    @user = User.find(params[:id])
-    unless current_user == @user
-      redirect_to root_url unless current_user?(@user)
-    end
-  end
-
 end
