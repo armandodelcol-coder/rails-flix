@@ -2,7 +2,7 @@
 
 This project was built on the "rails 6 course" of pragmaticstudio.com. I built step by step with the classes taught by the course. It's an easy project, but I think it's worth building because I was able to learn a lot about Rails MVC conventions in a very good explanation and a fun project =).
 
-This project is in the air, please visit to see \O/ => [rails-flix](https://rails-flix.herokuapp.com/)
+This project is online, please visit to see \O/ => [rails-flix](https://rails-flix.herokuapp.com/)
 
 ## Dependencies
 
